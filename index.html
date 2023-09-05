@@ -61,7 +61,7 @@
             keyboard-shortcuts=""
             screenshot=""
             device-orientation-permission-ui="">
-        <a-marker
+        <!-- a-marker
             preset="hiro"
             raycaster="objects: .clickable"
             emitevents="true"
@@ -73,7 +73,16 @@
             smooththreshold="1000"
             material=""
             arjs-anchor=""
-            arjs-hit-testing="">
+            arjs-hit-testing="" -->
+        <a-marker
+                id="animated-marker"
+                type="pattern"
+                preset="custom"
+                url="marker.patt"
+                raycaster="objects: .clickable"
+                emitevents="true"
+                cursor="fuse: false; rayOrigin: mouse;"
+                id="markerA">
             <a-sky id="sky"
                 color="#C0C0C0"
                 opacity="0"
