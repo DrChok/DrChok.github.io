@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
+    <!-- we import arjs version without NFT but with marker + location based support -->
+    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+    <script src="https://raw.githack.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
+    <script src="https://raw.githack.com/AR-js-org/studio-backend/master/src/modules/marker/tools/gesture-detector.js"></script>
+    <script src="https://raw.githack.com/AR-js-org/studio-backend/master/src/modules/marker/tools/gesture-handler.js"></script>
+    <script src="model-opacity.js"></script>
+    <body style="margin : 0px; overflow: hidden;">
+        <!-- a-scene embedded arjs -->
+        <a-scene
+            arjs="sourceWidth: 1024; sourceHeight: 776; displayWidth: 1024; displayHeight: 776;"
+            embedded=""
+            renderer="logarithmicDepthBuffer: true;"
+            vr-mode-ui="enabled: false"
+            gesture-detector=""
+            loading-screen="enabled: false"
+            id="scene"
+            inspector=""
+            keyboard-shortcuts=""
+            screenshot=""
+            device-orientation-permission-ui="">
+        <a-marker preset="hiro">
+            <!-- we use cors proxy to avoid cross-origin problems ATTENTION! you need to set up your server -->
+            <a-entity
+            position="0 0 0"
+            rotation="0 0 0"
+            scale="0.15 0.15 0.15"
+            gltf-model="molstar-model.gltf"
+            class="clickable"
+            model-opacity="0.99"
+            gesture-handler="">
+            </a-entity>
+        </a-marker>
+        <a-entity camera></a-entity>
+        </a-scene>
+    </body>
+</html>
