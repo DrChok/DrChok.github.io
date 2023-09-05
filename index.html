@@ -32,11 +32,13 @@
             cursor="fuse: false; rayOrigin: mouse;">
                 <a-entity
                     id="bowser-model"
+                    position="0 0 0"
                     scale="0.15 0.15 0.15"
                     animation-mixer="loop: repeat"
                     gltf-model="molstar-model.gltf"
                     class="clickable"
-                    gesture-handler="">
+                    model-opacity="0.99"
+                    gesture-handler-multimodel="">
                 </a-entity>
         </a-marker>
         <!-- a-marker preset="hiro" -->
