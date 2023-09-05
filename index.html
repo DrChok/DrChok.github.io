@@ -94,7 +94,7 @@
             arjs-anchor=""
             arjs-hit-testing="">
             <!-- we use cors proxy to avoid cross-origin problems ATTENTION! you need to set up your server -->
-            <a-sky
+             <a-sky
                 id="sky"
                 color="#C0C0C0"
                 opacity="0"
@@ -112,7 +112,15 @@
                 gesture-handler="">
             </a-entity>
         </a-marker>
-        <a-entity camera></a-entity>
+        <a-entity
+            camera>
+        </a-entity>
+        <canvas
+            class="a-canvas"
+            data-aframe-canvas="true"
+            width="1241"
+            height="931">
+        </canvas>
         </a-scene>
         <div id="trend_notification_app" class="trend_notification_app_outer">
             <div id="trend_notification">
