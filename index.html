@@ -14,6 +14,31 @@
       };
     </script>
     <body style="margin : 0px; overflow: hidden;">
+        <pre style="word-wrap: break-word; white-space: pre-wrap;">
+            body {
+                margin: 0px;
+                overflow: hidden;
+            }
+            #skybtn {
+                position: absolute;
+                top: 1%;
+                right: 1%;
+                width: 1%;
+                height: 1%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                z-index: 50;
+            }
+            .skybtn {
+                padding: 1em;
+                border-radius: 50%;
+                border: none;
+                background: #e7e7e7; color: black;
+                width: 3em;
+                height: 3em;
+            }
+        </pre>
         <div id="skybtn">
             <button class="skybtn" id="skybtn" onclick="skyCTRL()">X</button>
         </div>
