@@ -13,54 +13,56 @@
         alert("Android users experiencing extreme camera zoom should go to browser setting, accessibility/display/appearance, turn off force enable zoom/manual zoom/control zoom\n\nClick on X on the top right hand to partially hide background.");
       };
     </script>
-    <body style="margin : 0px; overflow: hidden;">
-        <pre style="word-wrap: break-word; white-space: pre-wrap;">
+    <style>
             body {
-                margin: 0px;
-                overflow: hidden;
+                margin : 0px;
+                overflow : hidden;
             }
             #skybtn {
-                position: absolute;
-                top: 1%;
-                right: 1%;
-                width: 1%;
-                height: 1%;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                z-index: 50;
+                position : absolute;
+                top : 1%;
+                right : 1%;
+                width : 1%;
+                height : 1%;
+                display : flex;
+                justify-content : center;
+                align-items : center;
+                z-index : 50;
             }
            .skybtn {
-                padding: 1em;
-                border-radius: 50%;
-                border: none;
-                background: #e7e7e7;
-                color: black;
-                width: 3em;
-                height: 3em;
+                padding : 1em;
+                border-radius : 50%;
+                border : none;
+                background : #e7e7e7;
+                color : black;
+                width : 3em;
+                height : 3em;
             }
             .btn {
-                padding: 0.25em;
-                border-radius: 4px;
-                border: true;
-                border-color: black;
-                background: yellow;
-                color: black;
-                width: 3em;
-                height: 3em;
-                margin-top: 10px;
+                padding : 0.25em;
+                border-radius : 4px;
+                border : true;
+                border-color : black;
+                background : yellow;
+                color : black;
+                width : 3em;
+                height : 3em;
+                margin-top : 10px;
             }
             .active {
-                padding: 0.25em;
-                border-radius: 4px;
-                border: true;
-                border-color: black;
-                background: lime;
-                color: black;
-                width: 3em;
-                height: 3em;
-                margin-top: 10px;
-            }    
+                padding : 0.25em;
+                border-radius : 4px;
+                border : true;
+                border-color : black;
+                background : lime;
+                color : black;
+                width : 3em;
+                height : 3em;
+                margin-top : 10px;
+            }            
+    </style>
+    <body style="margin : 0px; overflow: hidden;">
+        <pre style="word-wrap: break-word; white-space: pre-wrap;">
         </pre>
         <div id="skybtn">
             <button class="skybtn" id="skybtn" onclick="skyCTRL()">X</button>
