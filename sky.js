@@ -13,10 +13,10 @@
       }
     </pre>
     <div id="trend_notification_app" class="trend_notification_app_outer">
-    <div id="trend_notification">
-    <div id="trend_notification_con" class="clearfix">
-    </div>
-    </div>
+      <div id="trend_notification">
+        <div id="trend_notification_con" class="clearfix">
+        </div>
+      </div>
     </div>
     <div id="UMS_TOOLTIP" style="position: absolute; cursor: pointer; z-index: 2147483647; background: transparent; top: -100000px; left: -100000px;">
     </div>
