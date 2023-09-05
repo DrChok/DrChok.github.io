@@ -4,7 +4,8 @@
     <!-- we import arjs version without NFT but with marker + location based support -->
     <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
     <body style="margin : 0px; overflow: hidden;">
-        <a-scene embedded arjs>
+        <!-- a-scene embedded arjs>
+<a-scene arjs="sourceWidth: 1024; sourceHeight: 776; displayWidth: 1024; displayHeight: 776;" embedded="" renderer="logarithmicDepthBuffer: true;" vr-mode-ui="enabled: false" gesture-detector="" button-detector-multimodel="" loading-screen="enabled: false" gltf-model="dracoDecoderPath: https://www.gstatic.com/draco/v1/decoders/" id="scene" inspector="" keyboard-shortcuts="" screenshot="" device-orientation-permission-ui="">            
         <a-marker preset="hiro">
             <!-- we use cors proxy to avoid cross-origin problems ATTENTION! you need to set up your server -->
             <a-entity
