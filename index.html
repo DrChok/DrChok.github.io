@@ -8,65 +8,59 @@
     <script src="https://raw.githack.com/AR-js-org/studio-backend/master/src/modules/marker/tools/gesture-handler.js"></script>
     <script src="model-opacity.js"></script>
     <script src="sky.js"></script>
-    <pre style="word-wrap: break-word; white-space: pre-wrap;">
-        body {
-            margin: 0px;
-            overflow: hidden;
-        }
-
-        #skybtn {
-            position: absolute;
-            top: 1%;
-            right: 1%;
-            width: 1%;
-            height: 1%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            z-index: 50;
-        }
-  
-        .skybtn {
-            padding: 1em;
-            border-radius: 50%;
-            border: none;
-            background: #e7e7e7; color: black;
-            width: 3em;
-            height: 3em;
-        }
-
-        .btn {
-            padding: 0.25em;
-            border-radius: 4px;
-            border: true;
-            border-color: black;
-            background: yellow;
-            color: black;
-            width: 3em;
-            height: 3em;
-            margin-top: 10px;
-        }
-
-        .active {
-            padding: 0.25em;
-            border-radius: 4px;
-            border: true;
-            border-color: black;
-            background: lime;
-            color: black;
-            width: 3em;
-            height: 3em;
-            margin-top: 10px;
-        }
-    </pre>
-
     <script>
       window.onload = function () {
         alert("Android users experiencing extreme camera zoom should go to browser setting, accessibility/display/appearance, turn off force enable zoom/manual zoom/control zoom\n\nClick on X on the top right hand to partially hide background.");
       };
     </script>
-    
     <body style="margin : 0px; overflow: hidden;">
+        <pre style="word-wrap: break-word; white-space: pre-wrap;">
+            body {
+                margin: 0px;
+                overflow: hidden;
+            }
+            #skybtn {
+                position: absolute;
+                top: 1%;
+                right: 1%;
+                width: 1%;
+                height: 1%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                z-index: 50;
+            }
+           .skybtn {
+                padding: 1em;
+                border-radius: 50%;
+                border: none;
+                background: #e7e7e7; color: black;
+                width: 3em;
+                height: 3em;
+            }
+            .btn {
+                padding: 0.25em;
+                border-radius: 4px;
+                border: true;
+                border-color: black;
+                background: yellow;
+                color: black;
+                width: 3em;
+                height: 3em;
+                margin-top: 10px;
+            }
+            .active {
+                padding: 0.25em;
+                border-radius: 4px;
+                border: true;
+                border-color: black;
+                background: lime;
+                color: black;
+                width: 3em;
+                height: 3em;
+                margin-top: 10px;
+            }    
+        </pre>
         <!-- a-scene embedded arjs -->
         <a-scene
             arjs="sourceWidth: 1024; sourceHeight: 776; displayWidth: 1024; displayHeight: 776;"
