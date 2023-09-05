@@ -82,14 +82,21 @@
             device-orientation-permission-ui="">
         <a-marker preset="hiro">
             <!-- we use cors proxy to avoid cross-origin problems ATTENTION! you need to set up your server -->
+            <a-sky
+                id="sky"
+                color="#C0C0C0"
+                opacity="0"
+                material=""
+                geometry="" scale="">
+            </a-sky>
             <a-entity
-            position="0 0 0"
-            rotation="0 0 0"
-            scale="0.15 0.15 0.15"
-            gltf-model="molstar-model.gltf"
-            class="clickable"
-            model-opacity="0.99"
-            gesture-handler="">
+                position="0 0 0"
+                rotation="0 0 0"
+                scale="0.15 0.15 0.15"
+                gltf-model="molstar-model.gltf"
+                class="clickable"
+                model-opacity="0.99"
+                gesture-handler="">
             </a-entity>
         </a-marker>
         <a-entity camera></a-entity>
