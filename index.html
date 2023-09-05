@@ -7,7 +7,16 @@
     <script src="https://raw.githack.com/AR-js-org/studio-backend/master/src/modules/marker/tools/gesture-detector.js"></script>
     <script src="https://raw.githack.com/AR-js-org/studio-backend/master/src/modules/marker/tools/gesture-handler.js"></script>
     <script src="model-opacity.js"></script>
+    <script src="sky.js"></script>
+    <script>
+      window.onload = function () {
+        alert("Android users experiencing extreme camera zoom should go to browser setting, accessibility/display/appearance, turn off force enable zoom/manual zoom/control zoom\n\nClick on X on the top right hand to partially hide background\n\nPress the different buttons to show different atomic orbitals.");
+      };
+    </script>
     <body style="margin : 0px; overflow: hidden;">
+        <div id="skybtn">
+            <button class="skybtn" id="skybtn" onclick="skyCTRL()">X</button>
+        </div>
         <!-- a-scene embedded arjs -->
         <a-scene
             arjs="sourceWidth: 1024; sourceHeight: 776; displayWidth: 1024; displayHeight: 776;"
