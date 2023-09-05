@@ -22,33 +22,17 @@
             keyboard-shortcuts=""
             screenshot=""
             device-orientation-permission-ui="">
-        <a-marker
-            type="pattern"
-            url="marker.patt"
-            raycaster="objects: .clickable"
-            emitevents="true"
-            cursor="fuse: false; rayOrigin: mouse;">
-                <a-entity
-                    id="bowser-model"
-                    position="0 0 0"
-                    scale="0.15 0.15 0.15"
-                    animation-mixer="loop: repeat"
-                    gltf-model="molstar-model.gltf"
-                    class="clickable"
-                    model-opacity="0.99"
-                    gesture-handler-multimodel="">
-                </a-entity>
-        </a-marker>
-        <!-- a-marker preset="hiro" -->
+        <a-marker preset="hiro">
             <!-- we use cors proxy to avoid cross-origin problems ATTENTION! you need to set up your server -->
-            <!-- a-entity
+            <a-entity
             position="0 0 0"
             scale="0.15 0.15 0.15"
             gltf-model="molstar-model.gltf"
             class="clickable"
             model-opacity="0.99"
-            gesture-handler-multimodel="" -->
-            <!-- /a-entity -->
+            gesture-handler-multimodel="">
+            </a-entity>
+        </a-marker>
         <a-entity camera></a-entity>
         </a-scene>
     </body>
