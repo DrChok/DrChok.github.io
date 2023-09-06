@@ -8,10 +8,10 @@
             }
             #skybtn {
                 position: absolute;
-                top: 1%;
-                right: 1%;
-                width: 1%;
-                height: 1%;
+                top: 5%;
+                right: 5%;
+                width: 5%;
+                height: 5%;
                 display: flex;
                 justify-content: center;
                 align-items: center;
@@ -23,8 +23,8 @@
                 border: none;
                 background: #e7e7e7;
                 color: black;
-                width: 10em;
-                height: 10em;
+                width: 3em;
+                height: 3em;
             }
     </style>
     <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
@@ -35,9 +35,6 @@
     <script src="gesture-handler-multimodel.js"></script>
     <script src="model-opacity.js"></script>
     <script>
-        window.onload = function () {
-            alert("Android users experiencing extreme camera zoom should go to browser setting, accessibility/display/appearance, turn off force enable zoom/manual zoom/control zoom\n\nClick on × on the top right hand to show background.");
-        };
         function skyCTRL() {
             var sky1 = document.getElementById("sky1");
             var sky2 = document.getElementById("sky2");
@@ -80,7 +77,6 @@
             arjs-anchor=""
             arjs-hit-testing="" -->
         <a-assets>
-            <a-asset-item id="cis" src="CYCLOHEXENE.MOL2.gltf"></a-asset-item>
             <a-asset-item id="trans" src="TRANSCYCLOHEXENE.MOL2.gltf"></a-asset-item>
         </a-assets>
         <a-marker
