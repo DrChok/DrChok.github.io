@@ -27,9 +27,8 @@
                 height: 3em;
             }
             iframe {
-                background-color: transparent;
+                background-color: white;
                 border: 0;
-                color: white;
             }
            .left {
                 float:left;
@@ -51,8 +50,16 @@
         };
         function skyCTRL() {
             iframe = document.getElementsByTagName('iframe')[0];
-            iframe.style.background-color = 'white';
-            iframe.contentWindow.document.body.style.background-color = 'white';
+            if (iframe.style.background-color=='transparent') {
+                iframe.style.background-color = 'white';}
+            else {
+                iframe.style.background-color = 'transparent';}
+        //    var sky = document.getElementById("sky");
+        //    if (sky.getAttribute("opacity")=="0") {
+        //       sky.setAttribute("opacity","0.95");}
+        //    else {
+        //        sky.setAttribute("opacity","0");}
+        //}
         }
     </script>
     </head>
