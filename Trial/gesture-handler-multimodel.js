@@ -6,82 +6,80 @@ AFRAME.registerComponent("gesture-handler-multimodel", {
       rotationFactor: { default: 5 },
       minScale: { default: 0.01 },
       maxScale: { default: 8 },
-      el:,
     },
   
     init: function () {
-      this.el = el;
-      console.log("This element: ", this.el)
-      this.handleScale = this.handleScale.bind(this);
-      this.handleRotation = this.handleRotation.bind(this);
-      this.handleModel = this.handleModel.bind(this);
+      const obj = document.getElementbyId("cis")
+      obj.handleScale = obj.handleScale.bind(obj);
+      obj.handleRotation = obj.handleRotation.bind(obj);
+      obj.handleModel = obj.handleModel.bind(obj);
   
-      this.isVisible = false;
-      this.initialScale = this.el.object3D.scale.clone();
-      this.scaleFactor = 1;
+      obj.isVisible = false;
+      obj.initialScale = obj.el.object3D.scale.clone();
+      obj.scaleFactor = 1;
   
-      this.el.addEventListener("markerFound", (e) => {
+      obj.addEventListener("markerFound", (e) => {
         this.isVisible = true;
       });
   
-      this.el.addEventListener("markerLost", (e) => {
+      obj.addEventListener("markerLost", (e) => {
         this.isVisible = false;
       });
     },
   
     update: function () {
-      if (this.data.enabled) {
-        this.el.addEventListener("onefingermove", this.handleRotation);
-        this.el.addEventListener("twofingermove", this.handleScale);
-        this.el.addEventListener("btnevt", this.handleModel);
+      if (obj.data.enabled) {
+        obj.addEventListener("onefingermove", obj.handleRotation);
+        obj.addEventListener("twofingermove", obj.handleScale);
+        obj.addEventListener("btnevt", obj.handleModel);
 
       } else {
-        this.el.removeEventListener("onefingermove", this.handleRotation);
-        this.el.removeEventListener("twofingermove", this.handleScale);
-        this.el.removeEventListener("btnevt", this.handleModel);
+        obj.removeEventListener("onefingermove", obj.handleRotation);
+        obj.removeEventListener("twofingermove", obj.handleScale);
+        obj.removeEventListener("btnevt", obj.handleModel);
         }
     },
   
     remove: function () {
-      this.el.removeEventListener("onefingermove", this.handleRotation);
-      this.el.removeEventListener("twofingermove", this.handleScale);
-      this.el.removeEventListener("btnevt", this.handleModel);
+      obj.removeEventListener("onefingermove", obj.handleRotation);
+      obj.removeEventListener("twofingermove", obj.handleScale);
+      obj.removeEventListener("btnevt", obj.handleModel);
     },
   
     handleRotation: function (event) {
-      if (this.isVisible) {
-        this.el.object3D.rotation.y +=
-          event.detail.positionChange.x * this.data.rotationFactor;
-        this.el.object3D.rotation.x +=
-          event.detail.positionChange.y * this.data.rotationFactor;
+      if (obj.isVisible) {
+        obj.object3D.rotation.y +=
+          event.detail.positionChange.x * obj.data.rotationFactor;
+        obj.object3D.rotation.x +=
+          event.detail.positionChange.y * obj.data.rotationFactor;
       }
     },
 
     handleScale: function (event) {
-      if (this.isVisible) {
-        this.scaleFactor *=
+      if (obj.isVisible) {
+        obj.scaleFactor *=
           1 + event.detail.spreadChange / event.detail.startSpread;
   
-        this.scaleFactor = Math.min(
-          Math.max(this.scaleFactor, this.data.minScale),
-          this.data.maxScale
+        obj.scaleFactor = Math.min(
+          Math.max(obj.scaleFactor, obj.data.minScale),
+          obj.data.maxScale
         );
   
-        this.el.object3D.scale.x = this.scaleFactor * this.initialScale.x;
-        this.el.object3D.scale.y = this.scaleFactor * this.initialScale.y;
-        this.el.object3D.scale.z = this.scaleFactor * this.initialScale.z;
+        obj.object3D.scale.x = obj.scaleFactor * obj.initialScale.x;
+        obj.object3D.scale.y = obj.scaleFactor * obj.initialScale.y;
+        obj.object3D.scale.z = obj.scaleFactor * obj.initialScale.z;
       }
     },
 
     handleModel: function (event) {
-      if (this.isVisible) {
-        this.el.removeAttribute("gltf-model");
-        this.el.setAttribute("gltf-model","#orb" + event.detail.type);
-        this.el.object3D.rotation.x = 0;
-        this.el.object3D.rotation.y = 0;
-        this.el.object3D.scale.x = 0.1;
-        this.el.object3D.scale.y = 0.1;
-        this.el.object3D.scale.z = 0.1;
+      if (obj.isVisible) {
+        obj.removeAttribute("gltf-model");
+        obj.setAttribute("gltf-model","#orb" + event.detail.type);
+        obj.object3D.rotation.x = 0;
+        obj.object3D.rotation.y = 0;
+        obj.object3D.scale.x = 0.1;
+        obj.object3D.scale.y = 0.1;
+        obj.object3D.scale.z = 0.1;
       }
     },
   });
