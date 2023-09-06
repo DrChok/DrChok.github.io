@@ -9,7 +9,7 @@ AFRAME.registerComponent("gesture-handler-multimodel", {
     },
   
     init: function () {
-      const obj = document.getElementbyId("cis")
+      const obj = document.getElementbyId('cis')
       obj.handleScale = obj.handleScale.bind(obj);
       obj.handleRotation = obj.handleRotation.bind(obj);
       obj.handleModel = obj.handleModel.bind(obj);
