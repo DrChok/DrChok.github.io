@@ -6,30 +6,6 @@
                 margin: 0px;
                 overflow: hidden;
             }
-            #skybtn {
-                position: absolute;
-                top: 1%;
-                right: 1%;
-                width: 1%;
-                height: 1%;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                z-index: 50;
-            }
-           .skybtn {
-                padding: 1em;
-                border-radius: 50%;
-                border: none;
-                background: #e7e7e7;
-                color: black;
-                width: 3em;
-                height: 3em;
-            }
-            iframe {
-                background-color: white;
-                border: 0;
-            }
            .left {
                 float:left;
                 width:50%;
@@ -47,19 +23,6 @@
     <script>
         window.onload = function () {
             alert("Android users experiencing extreme camera zoom should go to browser setting, accessibility/display/appearance, turn off force enable zoom/manual zoom/control zoom\n\nClick on × on the top right hand to show background.");
-        };
-        function skyCTRL() {
-            iframe = document.getElementsByTagName('iframe')[0];
-            if (iframe.style.background-color=='transparent') {
-                iframe.style.background-color = 'white';}
-            else {
-                iframe.style.background-color = 'transparent';}
-        //    var sky = document.getElementById("sky");
-        //    if (sky.getAttribute("opacity")=="0") {
-        //       sky.setAttribute("opacity","0.95");}
-        //    else {
-        //        sky.setAttribute("opacity","0");}
-        //}
         }
     </script>
     </head>
@@ -67,7 +30,7 @@
         <div id="skybtn">
             <button class="skybtn" id="skybtn" onclick="skyCTRL()">×</button>
         </div>
-            <iframe title="cis" class="left" src="cis.html" height="100%" allowfullscreen="yes" allowvr="yes" scrolling="no">
+            <iframe title="cis" class="left" src="cis.html" height="100%" allowfullscreen="yes" allowvr="yes" scrolling="no" >
             </iframe>
             <iframe title="trans" class="left" src="trans.html" height="100%" allowfullscreen="yes" allowvr="yes" scrolling="no">
             </iframe>
