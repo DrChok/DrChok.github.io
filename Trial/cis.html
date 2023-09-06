@@ -38,13 +38,13 @@
         window.onload = function () {
             alert("Android users experiencing extreme camera zoom should go to browser setting, accessibility/display/appearance, turn off force enable zoom/manual zoom/control zoom\n\nClick on × on the top right hand to show background.");
         };
-        //function skyCTRL() {
-        //    var sky = document.getElementById("sky");
-        //    if (sky.getAttribute("opacity")=="0") {
-        //        sky.setAttribute("opacity","0.95");}
-        //    else {
-        //        sky.setAttribute("opacity","0");}
-        //}
+        function skyCTRL() {
+            var sky = document.getElementById("sky");
+            if (sky.getAttribute("opacity")=="0") {
+                sky.setAttribute("opacity","0.95");}
+            else {
+                sky.setAttribute("opacity","0");}
+        }
     </script>
     </head>
     <body>
@@ -89,13 +89,13 @@
                 emitevents="true"
                 cursor="fuse: false; rayOrigin: mouse;"
                 id="markerA">
-            <!-- a-sky id="sky"
+            <a-sky id="sky"
                 color="#C0C0C0"
                 opacity="0.95"
                 material=""
                 geometry=""
                 scale="">
-            </a-sky -->
+            </a-sky>
             <a-entity
                 id="cis"
                 position="0 0 0"
