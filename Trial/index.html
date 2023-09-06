@@ -76,6 +76,11 @@
             material=""
             arjs-anchor=""
             arjs-hit-testing="" -->
+            
+        <a-asset-item
+            id="cis" src="CYCLOHEXENE.MOL2.gltf"
+            id="trans" src="TRANSCYCLOHEXENE.MOL2.gltf">
+        </a-asset-item>
         <a-marker
                 id="animated-marker"
                 type="pattern"
@@ -97,7 +102,7 @@
                 position="-0.5 0 0"
                 rotation="0 0 0"
                 scale="0.15 0.15 0.15"
-                gltf-model="CYCLOHEXENE.MOL2.gltf"
+                gltf-model="#cis"
                 class="clickable"
                 model-opacity="0.99"
                 gesture-handler-multimodel="">
@@ -107,7 +112,7 @@
                 position="0.5 0 0"
                 rotation="0 0 0"
                 scale="0.15 0.15 0.15"
-                gltf-model="TRANSCYCLOHEXENE.MOL2.gltf"
+                gltf-model="#trans"
                 class="clickable"
                 model-opacity="0.99"
                 gesture-handler-multimodel="">
