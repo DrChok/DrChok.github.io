@@ -1,6 +1,6 @@
 /* global AFRAME */
 
-AFRAME.registerComponent('gesture-detector', {
+AFRAME.registerComponent('gesture-detector-multimodel', {
     schema: {
         element: { default: '' },
     },
