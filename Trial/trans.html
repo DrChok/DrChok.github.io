@@ -37,7 +37,7 @@
     <script>
         function skyCTRL() {
             var sky3 = document.getElementById("sky1");
-            var sky4 = window.parent.frames("cisframe").contentWindow.document.getElementById("sky2");
+            var sky4 = window.top.frames['cisframe'].contentWindow.document.getElementById("sky2");
             if (sky3.getAttribute("opacity")=="0") {
                 sky3.setAttribute("opacity","0.95");
                 sky4.setAttribute("opacity","0.95");}
