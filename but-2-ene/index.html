@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <style>
+            body {
+                margin: 0px;
+                overflow: hidden;
+            }
+           .left {
+                float:left;
+                width:50%;
+                height:350px;
+                border:none;
+           }
+           table {
+                font-family: "Gill Sans", sans-serif;
+                font-size:120%;
+           }
+    </style>
+    <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
+        <!-- we import arjs version without NFT but with marker + location based support -->
+    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+    <script src="https://raw.githack.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
+    <script src="gesture-detector-multimodel.js"></script>
+    <script src="gesture-handler-multimodel.js"></script>
+    <script src="model-opacity.js"></script>
+    <script>
+        window.onload = function () {
+            alert("Android users experiencing extreme camera zoom should go to browser setting, accessibility/display/appearance, turn off force enable zoom/manual zoom/control zoom.\n\nClick on × on the top right hand to show background.\n\nBest viewed in landscape mode with auto-rotation of screen enabled.");
+        }
+    </script>
+    </head>
+    <body>
+            <iframe id="cisframe" class="left" src="cis.html" height="100%" allowfullscreen="yes" allowvr="yes" scrolling="no">
+            </iframe>
+            <iframe id="transframe" class="left" src="trans.html" height="100%" allowfullscreen="yes" allowvr="yes" scrolling="no">
+            </iframe>
+        <table width=100%>
+            <tr>
+                <th width=50%><i>cis</i>-but-2-ene</th>
+                <th><i>trans</i>-but-2-ene</th>
+            </tr>
+            <tr>
+                <td colspan="2">From the space-filling models, it can be seen that the two methyl groups in <i>cis</i>-but-2-ene are already touching each other, resulting in steric repulsion between the two methyl groups, making it less stable than <i>trans</i>-but-2-ene.</td>
+            </tr>
+         </table>
+
+        <div id="UMS_TOOLTIP" style="position: absolute; cursor: pointer; z-index: 2147483647; background: transparent; top: -100000px; left: -100000px;">
+        </div>
+        <div id="trend_notification_app" class="trend_notification_app_outer">
+            <div id="trend_notification">
+                <div id="trend_notification_con" class="clearfix">
+                </div>
+            </div>
+        </div>
+        </body>
+    <umsdataelement id="UMSSendDataEventElement"></umsdataelement>
+</html>
