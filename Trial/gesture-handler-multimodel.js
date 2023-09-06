@@ -9,6 +9,7 @@ AFRAME.registerComponent("gesture-handler-multimodel", {
     },
   
     init: function () {
+      console.log("This element: ", this.el)
       this.handleScale = this.handleScale.bind(this);
       this.handleRotation = this.handleRotation.bind(this);
       this.handleModel = this.handleModel.bind(this);
