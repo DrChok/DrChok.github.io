@@ -9,6 +9,7 @@ AFRAME.registerComponent("gesture-handler-multimodel", {
     },
   
     init: function () {
+      entity.addEventListener
       this.handleScale = this.handleScale.bind(this);
       this.handleRotation = this.handleRotation.bind(this);
       this.handleModel = this.handleModel.bind(this);
@@ -28,21 +29,21 @@ AFRAME.registerComponent("gesture-handler-multimodel", {
   
     update: function () {
       if (this.data.enabled) {
-        this.el.addEventListener("onefingermove", this.handleRotation);
-        this.el.addEventListener("twofingermove", this.handleScale);
-        this.el.addEventListener("btnevt", this.handleModel);
+        this.el.sceneE1.addEventListener("onefingermove", this.handleRotation);
+        this.el.sceneE1.addEventListener("twofingermove", this.handleScale);
+        this.el.sceneE1.addEventListener("btnevt", this.handleModel);
 
       } else {
-        this.el.removeEventListener("onefingermove", this.handleRotation);
-        this.el.removeEventListener("twofingermove", this.handleScale);
-        this.el.removeEventListener("btnevt", this.handleModel);
+        this.el.sceneE1.removeEventListener("onefingermove", this.handleRotation);
+        this.el.sceneE1.removeEventListener("twofingermove", this.handleScale);
+        this.el.sceneE1.removeEventListener("btnevt", this.handleModel);
         }
     },
   
     remove: function () {
-      this.el.removeEventListener("onefingermove", this.handleRotation);
-      this.el.removeEventListener("twofingermove", this.handleScale);
-      this.el.removeEventListener("btnevt", this.handleModel);
+      this.el.sceneE1.removeEventListener("onefingermove", this.handleRotation);
+      this.el.sceneE1.removeEventListener("twofingermove", this.handleScale);
+      this.el.sceneE1.removeEventListener("btnevt", this.handleModel);
     },
   
     handleRotation: function (event) {
