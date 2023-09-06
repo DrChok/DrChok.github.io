@@ -26,6 +26,12 @@
                 width: 3em;
                 height: 3em;
             }
+           .left {
+                float:left;
+                width:50%;
+                height:760px;
+                border:none;
+           }
     </style>
     <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
         <!-- we import arjs version without NFT but with marker + location based support -->
@@ -51,9 +57,9 @@
         <div id="skybtn">
             <button class="skybtn" id="skybtn" onclick="skyCTRL()">×</button>
         </div>
-            <iframe title="cis" src="cis.html" height="100%" allowfullscreen="yes" allowvr="yes" scrolling="no">
+            <iframe title="cis" class="left" src="cis.html" height="100%" allowfullscreen="yes" allowvr="yes" scrolling="no">
             </iframe>
-            <iframe title="trans" src="trans.html" height="100%" allowfullscreen="yes" allowvr="yes" scrolling="no">
+            <iframe title="trans" class="left" src="trans.html" height="100%" allowfullscreen="yes" allowvr="yes" scrolling="no">
             </iframe>
         <div id="UMS_TOOLTIP" style="position: absolute; cursor: pointer; z-index: 2147483647; background: transparent; top: -100000px; left: -100000px;">
         </div>
