@@ -26,6 +26,14 @@
                 width: 3em;
                 height: 3em;
             }
+            iframe {
+                width: 50%;
+                height: 500px;
+                margin: 0 25%;
+                background-color: transparent;
+                border: 0;
+                color: white;
+            }
            .left {
                 float:left;
                 width:50%;
@@ -45,11 +53,9 @@
             alert("Android users experiencing extreme camera zoom should go to browser setting, accessibility/display/appearance, turn off force enable zoom/manual zoom/control zoom\n\nClick on × on the top right hand to show background.");
         };
         function skyCTRL() {
-            var sky = document.getElementById("sky");
-            if (sky.getAttribute("opacity")=="0") {
-                sky.setAttribute("opacity","0.95");}
-            else {
-                sky.setAttribute("opacity","0");}
+            iframe = document.getElementsByTagName('iframe')[0];
+            iframe.style.background-color = 'white';
+            iframe.contentWindow.document.body.style.background-color = 'white';
         }
     </script>
     </head>
@@ -61,9 +67,9 @@
             </iframe>
             <iframe title="trans" class="left" src="trans.html" height="100%" allowfullscreen="yes" allowvr="yes" scrolling="no">
             </iframe>
-            <iframe class="left" scrolling="no">cis
+            <iframe scrolling="no">cis
             </iframe>
-            <iframe class="left" scrolling="no">trans
+            <iframe scrolling="no">trans
             </iframe>
 
         <div id="UMS_TOOLTIP" style="position: absolute; cursor: pointer; z-index: 2147483647; background: transparent; top: -100000px; left: -100000px;">
