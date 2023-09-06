@@ -17,32 +17,32 @@ AFRAME.registerComponent("gesture-handler-multimodel", {
       this.initialScale = this.el.object3D.scale.clone();
       this.scaleFactor = 1;
   
-      this.el.addEventListener("markerFound", (e) => {
+      this.el.sceneEl.addEventListener("markerFound", (e) => {
         this.isVisible = true;
       });
   
-      this.el.addEventListener("markerLost", (e) => {
+      this.el.sceneEl.addEventListener("markerLost", (e) => {
         this.isVisible = false;
       });
     },
   
     update: function () {
       if (this.data.enabled) {
-        this.el.sceneE1.addEventListener("onefingermove", this.handleRotation);
-        this.el.sceneE1.addEventListener("twofingermove", this.handleScale);
-        this.el.sceneE1.addEventListener("btnevt", this.handleModel);
+        this.el.sceneEl.addEventListener("onefingermove", this.handleRotation);
+        this.el.sceneEl.addEventListener("twofingermove", this.handleScale);
+        this.el.sceneEl.addEventListener("btnevt", this.handleModel);
 
       } else {
-        this.el.sceneE1.removeEventListener("onefingermove", this.handleRotation);
-        this.el.sceneE1.removeEventListener("twofingermove", this.handleScale);
-        this.el.sceneE1.removeEventListener("btnevt", this.handleModel);
+        this.el.sceneEl.removeEventListener("onefingermove", this.handleRotation);
+        this.el.sceneEl.removeEventListener("twofingermove", this.handleScale);
+        this.el.sceneEl.removeEventListener("btnevt", this.handleModel);
         }
     },
   
     remove: function () {
-      this.el.sceneE1.removeEventListener("onefingermove", this.handleRotation);
-      this.el.sceneE1.removeEventListener("twofingermove", this.handleScale);
-      this.el.sceneE1.removeEventListener("btnevt", this.handleModel);
+      this.el.sceneEl.removeEventListener("onefingermove", this.handleRotation);
+      this.el.sceneEl.removeEventListener("twofingermove", this.handleScale);
+      this.el.sceneEl.removeEventListener("btnevt", this.handleModel);
     },
   
     handleRotation: function (event) {
