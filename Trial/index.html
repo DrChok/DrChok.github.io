@@ -51,76 +51,10 @@
         <div id="skybtn">
             <button class="skybtn" id="skybtn" onclick="skyCTRL()">×</button>
         </div>
-        <a-scene 
-            arjs="sourceWidth: 1024; sourceHeight: 776; displayWidth: 1024; displayHeight: 776;"
-            embedded=""
-            renderer="logarithmicDepthBuffer: true;"
-            vr-mode-ui="enabled: false"
-            loading-screen="enabled: false"
-            id="scene"
-            inspector=""
-            keyboard-shortcuts=""
-            screenshot=""
-            gesture-detector-multimodel=""
-            device-orientation-permission-ui="">
-        <!-- a-marker
-            preset="hiro"
-            raycaster="objects: .clickable"
-            emitevents="true"
-            cursor="fuse: false; rayOrigin: mouse;"
-            id="markerA"
-            smooth="true"
-            smoothcount="50"
-            smoothtolerance="0.1"
-            smooththreshold="1000"
-            material=""
-            arjs-anchor=""
-            arjs-hit-testing="" -->
-        <a-assets>
-            <a-asset-item id="cis" src="CYCLOHEXENE.MOL2.gltf"></a-asset-item>
-            <a-asset-item id="trans" src="TRANSCYCLOHEXENE.MOL2.gltf"></a-asset-item>
-        </a-assets>
-        <a-marker
-                id="animated-marker"
-                type="pattern"
-                preset="custom"
-                url="marker.patt"
-                raycaster="objects: .clickable"
-                emitevents="true"
-                cursor="fuse: false; rayOrigin: mouse;"
-                id="markerA">
-            <a-sky id="sky"
-                color="#C0C0C0"
-                opacity="0.95"
-                material=""
-                geometry=""
-                scale="">
-            </a-sky>
-            <a-entity
-                id="cis"
-                position="-0.5 0 0"
-                rotation="0 0 0"
-                scale="0.15 0.15 0.15"
-                gltf-model="#cis"
-                class="clickable"
-                model-opacity="0.99"
-                gesture-handler-multimodel="">
-            </a-entity>
-            <a-entity
-                id="trans"
-                position="0.5 0 0"
-                rotation="0 0 0"
-                scale="0.15 0.15 0.15"
-                gltf-model="#trans"
-                class="clickable"
-                model-opacity="0.99"
-                gesture-handler-multimodel="">
-            </a-entity>
-        </a-marker>
-        <a-entity
-            camera>
-        </a-entity>
-        </a-scene>
+            <iframe title="cis" src="cis.html" height="100%" allowfullscreen="yes" allowvr="yes" scrolling="no">
+            </iframe>
+            <iframe title="trans" src="trans.html" height="100%" allowfullscreen="yes" allowvr="yes" scrolling="no">
+            </iframe>
         <div id="UMS_TOOLTIP" style="position: absolute; cursor: pointer; z-index: 2147483647; background: transparent; top: -100000px; left: -100000px;">
         </div>
         <div id="trend_notification_app" class="trend_notification_app_outer">
