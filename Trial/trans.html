@@ -39,11 +39,13 @@
             alert("Android users experiencing extreme camera zoom should go to browser setting, accessibility/display/appearance, turn off force enable zoom/manual zoom/control zoom\n\nClick on × on the top right hand to show background.");
         };
         function skyCTRL() {
-            var sky = document.getElementById("sky");
+            const sky = document.querySelectorAll("sky");
             if (sky.getAttribute("opacity")=="0") {
-                sky.setAttribute("opacity","0.95");}
+                sky.forEach((userItem) => {
+                    sky.setAttribute("opacity","0.95")});
             else {
-                sky.setAttribute("opacity","0");}
+                sky.forEach((userItem) => {
+                    sky.setAttribute("opacity","0.95")});
         }
     </script>
     </head>
