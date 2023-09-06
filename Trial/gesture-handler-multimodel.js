@@ -17,32 +17,32 @@ AFRAME.registerComponent("gesture-handler-multimodel", {
       this.initialScale = this.el.object3D.scale.clone();
       this.scaleFactor = 1;
   
-      this.el.sceneEl.addEventListener("markerFound", (e) => {
+      this.el.addEventListener("markerFound", (e) => {
         this.isVisible = true;
       });
   
-      this.el.sceneEl.addEventListener("markerLost", (e) => {
+      this.el.addEventListener("markerLost", (e) => {
         this.isVisible = false;
       });
     },
   
     update: function () {
       if (this.data.enabled) {
-        this.el.sceneEl.addEventListener("onefingermove", this.handleRotation);
-        this.el.sceneEl.addEventListener("twofingermove", this.handleScale);
-        this.el.sceneEl.addEventListener("btnevt", this.handleModel);
+        this.el.addEventListener("onefingermove", this.handleRotation);
+        this.el.addEventListener("twofingermove", this.handleScale);
+        this.el.addEventListener("btnevt", this.handleModel);
 
       } else {
-        this.el.sceneEl.removeEventListener("onefingermove", this.handleRotation);
-        this.el.sceneEl.removeEventListener("twofingermove", this.handleScale);
-        this.el.sceneEl.removeEventListener("btnevt", this.handleModel);
+        this.el.removeEventListener("onefingermove", this.handleRotation);
+        this.el.removeEventListener("twofingermove", this.handleScale);
+        this.el.removeEventListener("btnevt", this.handleModel);
         }
     },
   
     remove: function () {
-      this.el.sceneEl.removeEventListener("onefingermove", this.handleRotation);
-      this.el.sceneEl.removeEventListener("twofingermove", this.handleScale);
-      this.el.sceneEl.removeEventListener("btnevt", this.handleModel);
+      this.el.removeEventListener("onefingermove", this.handleRotation);
+      this.el.removeEventListener("twofingermove", this.handleScale);
+      this.el.removeEventListener("btnevt", this.handleModel);
     },
   
     handleRotation: function (event) {
