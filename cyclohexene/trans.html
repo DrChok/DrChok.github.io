@@ -31,8 +31,8 @@
         <!-- we import arjs version without NFT but with marker + location based support -->
     <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
     <script src="https://raw.githack.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
-    <script src="gesture-detector-multimodel.js"></script>
-    <script src="gesture-handler-multimodel.js"></script>
+    <script src="https://raw.githack.com/AR-js-org/studio-backend/master/src/modules/marker/tools/gesture-detector.js"></script>
+    <script src="https://raw.githack.com/AR-js-org/studio-backend/master/src/modules/marker/tools/gesture-handler.js"></script>
     <script src="model-opacity.js"></script>
     <script>
         function skyCTRL() {
@@ -61,7 +61,7 @@
             inspector=""
             keyboard-shortcuts=""
             screenshot=""
-            gesture-detector-multimodel=""
+            gesture-detector=""
             device-orientation-permission-ui="">
         <!-- a-marker
             preset="hiro"
@@ -103,7 +103,7 @@
                 gltf-model="#trans"
                 class="clickable"
                 model-opacity="0.99"
-                gesture-handler-multimodel="">
+                gesture-handler="">
             </a-entity>
         </a-marker>
         <a-entity
