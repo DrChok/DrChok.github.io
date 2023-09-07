@@ -6,6 +6,27 @@
                 margin: 0px;
                 overflow: hidden;
             }
+            #skybtn {
+                position: absolute;
+                top: 3%;
+                right: 3%;
+                width: 3%;
+                height: 3%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                z-index: 50;
+            }
+           .skybtn {
+                padding: 0.5em;
+                border-radius: 50%;
+                border: none;
+                background: #e7e7e7;
+                color: black;
+                font-size: 50px;
+                width: 0.8em;
+                height: 0.8em;
+            }
     </style>
     <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
         <!-- we import arjs version without NFT but with marker + location based support -->
@@ -14,6 +35,24 @@
     <script src="https://raw.githack.com/AR-js-org/studio-backend/master/src/modules/marker/tools/gesture-detector.js"></script>
     <script src="gesture-handler-enantiomer.js"></script>
     <script src="model-opacity.js"></script>
+    <script>
+        function skyCTRL() {
+            var sky4 = document.getElementById("sky4");
+            var sky3 = window.top.frames['RSframe'].contentWindow.document.getElementById("sky3");
+            var sky2 = window.top.frames['SSframe'].contentWindow.document.getElementById("sky2");
+            var sky1 = window.top.frames['RRframe'].contentWindow.document.getElementById("sky1");
+            if (sky4.getAttribute("opacity")=="0") {
+                sky4.setAttribute("opacity","0.95");
+                sky3.setAttribute("opacity","0.95");
+                sky2.setAttribute("opacity","0.95");
+                sky1.setAttribute("opacity","0.95");}
+            else {
+                sky4.setAttribute("opacity","0");
+                sky3.setAttribute("opacity","0");
+                sky2.setAttribute("opacity","0");
+                sky1.setAttribute("opacity","0");}
+        }
+    </script>
     </head>
     <body>
         <a-scene 
@@ -42,7 +81,7 @@
             arjs-anchor=""
             arjs-hit-testing="" -->
         <a-assets>
-            <a-asset-item id="SR" src="RSTARTARICACID.MOL2.glb"></a-asset-item>
+            <a-asset-item id="SR" src="SRTARTARICACID.MOL2.glb"></a-asset-item>
         </a-assets>
         <a-marker
                 id="animated-marker"
@@ -53,7 +92,7 @@
                 emitevents="true"
                 cursor="fuse: false; rayOrigin: mouse;"
                 id="markerA">
-            <a-sky id="sky2"
+            <a-sky id="sky4"
                 color="#C0C0C0"
                 opacity="0.95"
                 material=""
@@ -61,7 +100,7 @@
                 scale="">
             </a-sky>
             <a-entity
-                id="cis"
+                id="SR"
                 position="0 0 0"
                 rotation="0 0 0"
                 scale="0.5 0.5 0.5"
