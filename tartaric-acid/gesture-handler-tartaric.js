@@ -1,6 +1,6 @@
 /* global AFRAME, THREE */
 
-AFRAME.registerComponent('gesture-handler-enantiomer', {
+AFRAME.registerComponent('gesture-handler-tartaric', {
     schema: {
         enabled: { default: true },
         rotationzFactor: { default: 5 },
