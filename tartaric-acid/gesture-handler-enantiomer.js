@@ -3,21 +3,17 @@
 AFRAME.registerComponent('gesture-handler-enantiomer', {
     schema: {
         enabled: { default: true },
-        rotationFactor: { default: 5 },
+        rotationzFactor: { default: 5 },
+        rotationyFactor: { default: 5 },
     },
 
     init: function() {
         this.handleRotationy = this.handleRotationy.bind(this);
         this.handleRotationz = this.handleRotationz.bind(this);
-
         this.isVisible = false;
-//        this.initialScale = this.el.object3D.scale.clone();
-        this.scaleFactor = 5;
-
         this.el.sceneEl.addEventListener('markerFound', (e) => {
             this.isVisible = true;
         });
-
         this.el.sceneEl.addEventListener('markerLost', (e) => {
             this.isVisible = false;
         });
@@ -29,29 +25,29 @@ AFRAME.registerComponent('gesture-handler-enantiomer', {
             this.el.sceneEl.addEventListener('twofingermove', this.handleRotationy);
         } else {
             this.el.sceneEl.removeEventListener('onefingermove', this.handleRotationz);
-//            this.el.sceneEl.removeEventListener('twofingermove', this.handleRotationy);
+            this.el.sceneEl.removeEventListener('twofingermove', this.handleRotationy);
         }
     },
 
     remove: function() {
         this.el.sceneEl.removeEventListener('onefingermove', this.handleRotationz);
-//        this.el.sceneEl.removeEventListener('twofingermove', this.handleRotationy);
+        this.el.sceneEl.removeEventListener('twofingermove', this.handleRotationy);
     },
 
     handleRotationz: function(event) {
         if (this.isVisible) {
             this.el.object3D.rotation.z +=
-                event.detail.positionChange.x * this.data.rotationFactor;
+                event.detail.positionChange.x * this.data.rotationzFactor;
         }
     },
 
     handleRotationy: function(event) {
         if (this.isVisible) {
-            this.scaleFactor *=
+            this.rotationyFactor *=
                 1 + event.detail.spreadChange / event.detail.startSpread;
 
             this.el.object3D.rotation.y +=
-                event.detail.positionChange.y * this.scaleFactor;
+                event.detail.positionChange.y * this.rotationyFactor;
 
         }
     },
