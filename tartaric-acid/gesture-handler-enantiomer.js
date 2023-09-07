@@ -7,8 +7,8 @@ AFRAME.registerComponent('gesture-handler-enantiomer', {
     },
 
     init: function() {
-//        this.handleScale = this.handleScale.bind(this);
-        this.handleRotation = this.handleRotation.bind(this);
+        this.handleRotationy = this.handleRotationy.bind(this);
+        this.handleRotationz = this.handleRotationz.bind(this);
 
         this.isVisible = false;
 //        this.initialScale = this.el.object3D.scale.clone();
