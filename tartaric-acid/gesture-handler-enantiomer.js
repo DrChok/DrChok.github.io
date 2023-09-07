@@ -4,13 +4,14 @@ AFRAME.registerComponent('gesture-handler-enantiomer', {
     schema: {
         enabled: { default: true },
         rotationzFactor: { default: 5 },
+        rotationyFactor: { default: 5 },	
     },
 
     init: function() {
         this.handleRotationy = this.handleRotationy.bind(this);
         this.handleRotationz = this.handleRotationz.bind(this);
         this.isVisible = false;
-        this.rotationyFactor = 5;
+ //       this.rotationyFactor = 5;
         this.el.sceneEl.addEventListener('markerFound', (e) => {
             this.isVisible = true;
         });
@@ -43,11 +44,11 @@ AFRAME.registerComponent('gesture-handler-enantiomer', {
 
     handleRotationy: function(event) {
         if (this.isVisible) {
-            this.rotationyFactor *=
+            this.data.rotationyFactor *=
                 1 + event.detail.spreadChange / event.detail.startSpread;
 
             this.el.object3D.rotation.y +=
-                event.detail.positionChange.y * this.rotationyFactor;
+                event.detail.positionChange.y * this.data.rotationyFactor;
 
         }
     },
