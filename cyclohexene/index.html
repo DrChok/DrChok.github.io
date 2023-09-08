@@ -13,11 +13,22 @@
                 height:350px;
                 border:none;
            }
-           table, th, td {
+           table, td, th {
                 font-family: "Gill Sans", sans-serif;
-                font-size:120%;
-                padding: 15px;
+                padding: 5px;
                 text-align: center;
+                border: 1px solid;
+           }
+           table {
+                font-size: 100%;
+                border-collapse: collapse;
+                table-layout:fixed;
+                width:100%;
+           }
+           td { 
+                overflow: hidden; 
+                text-overflow: ellipsis; 
+                word-wrap: break-word;
            }
     </style>
     <script>
@@ -37,8 +48,8 @@
                 <th><i>trans</i>-cyclohexene</th>
             </tr>
             <tr>
-                <td width=50%><img src="ciscyclohexene.png"></td>
-                <td><img src="transcyclohexene.png"></td>
+                <td width=50%><img src="ciscyclohexene.png" style="width:200px; max-width:50%;"></td>
+                <td><img src="transcyclohexene.png" style="width:200px; max-width:50%;"></td>
             </tr>
             <tr>
                 <td colspan="2">As the double bond C atoms are sp² hybridised, the molecule should be planar about the C=C. This is readily achieved in <i>cis</i>-cyclohexene. However, in the case of <i>trans</i>-cyclohexene, this will require the remaining 3 CH₂–CH₂–CH₂–CH₂ bonds to be longer (hence weaker) than normal C–C bonds, and the bond angles also deviate significantly from the ideal tetrahedral angle of 109.5º.</td>

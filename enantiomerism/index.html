@@ -15,9 +15,20 @@
            }
            table, td, th {
                 font-family: "Gill Sans", sans-serif;
-                font-size:120%;
-                padding: 15px;
+                padding: 5px;
                 text-align: center;
+                border: 1px solid;
+           }
+           table {
+                font-size: 100%;
+                border-collapse: collapse;
+                table-layout:fixed;
+                width:100%;
+           }
+           td { 
+                overflow: hidden; 
+                text-overflow: ellipsis; 
+                word-wrap: break-word;
            }
     </style>
     <script>
@@ -37,8 +48,8 @@
                 <th>(<i>S</i>)-bromochloroiodomethane</th>
             </tr>
             <tr>
-                <td width=50%><img src="Rbromochloroiodomethane.png"></td>
-                <td><img src="Sbromochloroiodomethane.png"></td>
+                <td width=50%><img src="Rbromochloroiodomethane.png" style="width:200px; max-width:50%;"></td>
+                <td><img src="Sbromochloroiodomethane.png" style="width:200px; max-width:50%;"></td>
             </tr>
             <tr>
                 <td colspan="2">Try to rotate the two molecules about the z-axis (by sliding your finger left-right). You find that the two mirror images are non-superposable. You can only align two of the substituents at any time. The remaining two substituents will not be aligned. These two molecules are said to be a pair of enantiomers, and the compound exhibit enantiomerism.</td>
