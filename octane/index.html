@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+            body {
+                margin: 0px;
+                overflow: hidden;
+            }
+           .left {
+                float:left;
+                width:50%;
+                height:350px;
+                border:none;
+           }
+           table, td, th {
+                font-family: "Gill Sans", sans-serif;
+                padding: 5px;
+                text-align: center;
+           }
+           table {
+                font-size: 100%;
+                border-collapse: collapse;
+                table-layout:fixed;
+                width:100%;
+           }
+           td { 
+                overflow: hidden; 
+                text-overflow: ellipsis; 
+                word-wrap: break-word;
+           }
+           td.justify {
+                text-align:justify;
+           }
+    </style>
+    <script>
+        window.onload = function () {
+            alert("Android users experiencing extreme camera zoom should go to browser setting, accessibility/display/appearance, turn off force enable zoom/manual zoom/control zoom.\n\nClick on × on the top right hand to show background.\n\nBest viewed in landscape mode with auto-rotation of screen enabled.\n\nTo Zoom in or out, adjust the distance between your device and the marker.\n\nYou can rotate the molecules about the z-axis by sliding your finger left-right.");
+        }
+    </script>
+    </head>
+    <body>
+            <iframe id="Top" class="left" src="Top.html" height="100%" allowfullscreen="yes" allowvr="yes" scrolling="no">
+            </iframe>
+            <iframe id="Side" class="left" src="Side.html" height="100%" allowfullscreen="yes" allowvr="yes" scrolling="no">
+            </iframe>
+        <table width=100%>
+            <tr>
+                <th width=50%>Top view</th>
+                <th width=50%>Side view</th>
+            </tr>
+            <tr>
+                <td width=50%><img src="Top.png" style="width:87.95px; max-width:30.78%;"></td>
+                <td  width=50%><img src="Side.png" style="width:91.5px; max-width:32%;"></td>
+            </tr>
+            <tr>
+                <td colspan="2" class="justify">Try to rotate the two molecules about the z-axis (by sliding your finger left-right). You find that the two mirror images are non-superposable. You can only align two of the substituents at each double bond carbon at any time. The remaining two substituents on the other double bond carbon will not be aligned. Despite having no chiral centres, 1,3-dichloropropa-1,2-diene exist as a pair of enantiomers, and is chiral.</td>
+            </tr>
+         </table>
+
+        <div id="UMS_TOOLTIP" style="position: absolute; cursor: pointer; z-index: 2147483647; background: transparent; top: -100000px; left: -100000px;">
+        </div>
+        <div id="trend_notification_app" class="trend_notification_app_outer">
+            <div id="trend_notification">
+                <div id="trend_notification_con" class="clearfix">
+                </div>
+            </div>
+        </div>
+        </body>
+    <umsdataelement id="UMSSendDataEventElement"></umsdataelement>
+</html>
